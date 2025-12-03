@@ -58,6 +58,17 @@ export default function SignInForm() {
             <div className='w-full border-t border-gray-200 dark:border-gray-800'></div>
           </div>
         </div>
+        <div className='mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg'>
+          <p className='text-sm text-blue-800 dark:text-blue-300 font-medium mb-2'>
+            Credenciales de acceso:
+          </p>
+          <p className='text-sm text-blue-700 dark:text-blue-400'>
+            <span className='font-semibold'>Email:</span> admin@example.com
+          </p>
+          <p className='text-sm text-blue-700 dark:text-blue-400'>
+            <span className='font-semibold'>Password:</span> 123456
+          </p>
+        </div>
         <form onSubmit={handleLogin}>
           <div className='space-y-6'>
             <div>
@@ -66,7 +77,7 @@ export default function SignInForm() {
               </Label>
               <Input
                 type='email'
-                placeholder='admin@example.com'
+                placeholder='Introduce el email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -78,7 +89,7 @@ export default function SignInForm() {
               <div className='relative'>
                 <Input
                   type={showPassword ? 'text' : 'password'}
-                  placeholder='123456'
+                  placeholder='Introduce la contraseña'
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />

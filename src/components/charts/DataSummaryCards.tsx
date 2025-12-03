@@ -18,12 +18,12 @@ export default function DataSummaryCards({ timeRange }: DataSummaryCardsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
       {/* Temperature Card */}
-      <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-600">Average Temperature</p>
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Average Temperature</p>
             <p className="text-2xl font-bold text-red-600">{summaryData.temperature.value}</p>
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
               <span className={getChangeStyle(summaryData.temperature.changeType)}>
                 {getChangeIcon(summaryData.temperature.changeType)} {summaryData.temperature.change}
               </span> {summaryData.temperature.comparison}
@@ -38,12 +38,12 @@ export default function DataSummaryCards({ timeRange }: DataSummaryCardsProps) {
       </div>
 
       {/* Humidity Card */}
-      <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-600">Average Humidity</p>
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Average Humidity</p>
             <p className="text-2xl font-bold text-blue-600">{summaryData.humidity.value}</p>
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
               <span className={getChangeStyle(summaryData.humidity.changeType)}>
                 {getChangeIcon(summaryData.humidity.changeType)} {summaryData.humidity.change}
               </span> {summaryData.humidity.comparison}
@@ -58,12 +58,12 @@ export default function DataSummaryCards({ timeRange }: DataSummaryCardsProps) {
       </div>
 
       {/* Presence Card */}
-      <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-600">Active Detections</p>
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Active Detections</p>
             <p className="text-2xl font-bold text-green-600">{summaryData.presence.value}</p>
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
               <span className={getChangeStyle(summaryData.presence.changeType)}>
                 {getChangeIcon(summaryData.presence.changeType)} {summaryData.presence.change}
               </span> {summaryData.presence.comparison}

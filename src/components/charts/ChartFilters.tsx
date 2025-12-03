@@ -13,16 +13,16 @@ export default function ChartFilters({ filters }: ChartFiltersProps) {
   }
 
   return (
-    <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 mb-6">
+    <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 mb-6">
       <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
         <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
           {/* Time Range Filter */}
           <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-700">Time Range:</label>
-            <select 
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Time Range:</label>
+            <select
               value={selectedTimeRange}
               onChange={(e) => setSelectedTimeRange(e.target.value as TimeRange)}
-              className="px-3 py-2 pr-8 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-[140px]"
+              className="px-3 py-2 pr-8 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-[140px]"
             >
               {TIME_RANGE_OPTIONS.map(option => (
                 <option key={option.value} value={option.value}>
@@ -34,11 +34,11 @@ export default function ChartFilters({ filters }: ChartFiltersProps) {
 
           {/* Data Type Filter */}
           <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-700">Data Type:</label>
-            <select 
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Data Type:</label>
+            <select
               value={selectedDataType}
               onChange={(e) => setSelectedDataType(e.target.value as DataType)}
-              className="px-3 py-2 pr-8 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-[130px]"
+              className="px-3 py-2 pr-8 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-[130px]"
             >
               <option value="all">All Data</option>
               <option value="temperature">Temperature Only</option>

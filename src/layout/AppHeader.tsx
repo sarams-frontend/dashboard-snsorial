@@ -67,12 +67,22 @@ const AppHeader: React.FC = () => {
 
           <Link to="/" className="lg:hidden flex items-center justify-center px-2">
             <img
-              className="max-w-full h-auto object-contain"
+              className="max-w-full h-auto object-contain dark:hidden"
               src="/images/logo/logo.png"
               alt="Snsorial Logo"
-              style={{ 
-                width: '100px', 
-                height: '28px', 
+              style={{
+                width: '100px',
+                height: '28px',
+                objectFit: 'contain'
+              }}
+            />
+            <img
+              className="max-w-full h-auto object-contain hidden dark:block"
+              src="/images/logo/logo-negativo.png"
+              alt="Snsorial Logo"
+              style={{
+                width: '100px',
+                height: '28px',
                 objectFit: 'contain'
               }}
             />

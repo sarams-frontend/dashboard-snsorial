@@ -256,10 +256,23 @@ const AppSidebar: React.FC = () => {
       >
         <Link to='/' className="flex items-center justify-center min-w-0 w-full px-2">
           <img
-            className='transition-all duration-300 ease-in-out block max-w-full h-auto'
+            className='transition-all duration-300 ease-in-out block max-w-full h-auto dark:hidden'
             src='/images/logo/logo.png'
             alt='Snsorial Logo'
-            style={{ 
+            style={{
+              width: (isExpanded || isHovered || isMobileOpen) ? '130px' : '55px',
+              minWidth: '45px',
+              height: 'auto',
+              maxHeight: '38px',
+              objectFit: 'contain',
+              display: 'block'
+            }}
+          />
+          <img
+            className='transition-all duration-300 ease-in-out hidden dark:block max-w-full h-auto'
+            src='/images/logo/logo-negativo.png'
+            alt='Snsorial Logo'
+            style={{
               width: (isExpanded || isHovered || isMobileOpen) ? '130px' : '55px',
               minWidth: '45px',
               height: 'auto',
